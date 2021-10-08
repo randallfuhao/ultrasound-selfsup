@@ -67,7 +67,7 @@ class SimCLRTrainDataTransform(object):
         self.online_transform = transforms.Compose([
             transforms.RandomCrop(self.input_size, padding=(4, 32)),
             transforms.RandomHorizontalFlip(),
-            transforms.Grayscale(num_output_channels=1),  # xys， 将输出图形变为单通道
+            transforms.Grayscale(num_output_channels=1),  
             self.final_transform
         ])
 
