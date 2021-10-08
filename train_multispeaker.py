@@ -167,7 +167,7 @@ def cosinLR(optimizer, warmup_t, T):
     lambda1 = lambda epoch: ((1-min_ratio) * epoch / t + min_ratio) if epoch < t \
         else min_ratio if n_t * (1 + math.cos(math.pi * (epoch - t) / (T - t))) < min_ratio \
         else n_t * (1 + math.cos(math.pi * (epoch - t) / (T - t)))
-    sched = optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lambda1)   #LambdaLR的学习率=优化器的基本学习率 x lambda系数
+    sched = optim.lr_scheduler.LambdaLR(optimizer, lr_lambda=lambda1)
     return sched
 
 import torchvision
