@@ -51,7 +51,7 @@ def get_args():
                         help='whether to load the imagenet pretrained params')
     parser.add_argument('--batch-size', default=64, type=int, help='batch size')
     parser.add_argument('--warmup_epoch', default=3, type=int, help='warmup epochs')
-    parser.add_argument('--max_epoch', default=20, type=int, help='total epochs to run')
+    parser.add_argument('--max_epoch', default=30, type=int, help='total epochs to run')
     parser.add_argument('--freeze_epochs', default=0, type=int, help='freeze the backbone for some epochs, then unfreeze it')
 
     parser.add_argument('--name', default='0', type=str, help='name of run')
